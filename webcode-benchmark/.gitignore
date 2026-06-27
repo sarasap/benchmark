@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.egg-info/
+*.json
+!data/**/*.json
+!data/**/*.jsonl
+data/contents/golden_markdown.jsonl
+runs/
+eval_results*/
+golden_output*/
+logs.md
