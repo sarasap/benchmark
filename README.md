@@ -14,7 +14,7 @@ An independent replication of Exa's WebCode Benchmark, built to understand how s
 Built an independent golden reference pipeline to evaluate extraction fidelity. For each of the 250 URLs in Exa's code_contents dataset, the following steps were taken:
 
 Rendered the page in a headless Chromium browser using Playwright, with a 1280×800 viewport and a standard Chrome user agent. After initial page load, waited for the DOM to stabilize, then scrolled through the entire page to trigger lazy-loaded content before capturing a full-page screenshot and the fully rendered DOM.
-Cleaned the raw DOM by stripping tags that carry no substantive content — <script>, <style>, <svg>, <noscript>, and <iframe>. This typically reduced the DOM size by 50–80% without removing any visible page content.
+Cleaned the raw DOM by stripping tags that carry no substantive content. This typically reduced the DOM size by 50–80% without removing any visible page content.
 Fed both the screenshot and cleaned DOM to Gemini 2.5 Pro, which produced clean markdown representing the page's substantive content. The screenshot provides layout context (distinguishing main content from navigation and sidebars), while the DOM provides precise text for faithful extraction.
 
 Of the 250 URLs, 240 golden references were successfully generated. The remaining were excluded due to expired domains (3), Cloudflare bot protection (3), connection timeouts (1), non-English content (1), and pages exceeding model input limits (2).
