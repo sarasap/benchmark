@@ -1,4 +1,4 @@
-# Study of WebCode Benchmark EXA 
+# Study of Exa's WebCode Benchmark  
 
 An independent replication of Exa's WebCode Benchmark, built to understand how search quality benchmarking works and how different web search providers extract content for coding agents. This replication builds its own ground truth by rendering each URL in a browser and using Gemini as both the multimodal model for generating the golden markdown and the LLM judge for scoring provider extractions.
 
